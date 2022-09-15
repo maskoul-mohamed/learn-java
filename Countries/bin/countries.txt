@@ -1,0 +1,4 @@
+Morocco;Rabat;428552;Africa
+Japan;Tokyo;72555252;Asia
+USA;W;2042065;America
+Spain;Madrid;862486;Europe
