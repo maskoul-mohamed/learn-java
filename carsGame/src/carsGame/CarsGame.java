@@ -13,12 +13,12 @@ public class CarsGame {
 		p.setLayout(new GridLayout(4,1));
 
 		Thread[] threads = new Thread[4];
-		Voiture[] voiture = new Voiture[4];
+		VoitureIMG[] voiture = new VoitureIMG[4];
 		
-		voiture[0] = new Voiture(Color.red, "Hamid", 0, 360);
-		voiture[1] = new Voiture(Color.black, "Hassan", 0, 360);
-		voiture[2] = new Voiture(Color.green, "Said", 0, 360);
-		voiture[3] = new Voiture(Color.blue, "Moad", 0, 360);
+		voiture[0] = new VoitureIMG(Color.red, "Hamid", 0, 360);
+		voiture[1] = new VoitureIMG(Color.black, "Hassan", 0, 360);
+		voiture[2] = new VoitureIMG(Color.green, "Said", 0, 360);
+		voiture[3] = new VoitureIMG(Color.blue, "Moad", 0, 360);
 		
 		for(int i = 0 ; i < 4 ; i++) {
 			p.add(voiture[i]);
