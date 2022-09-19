@@ -7,16 +7,25 @@ public class Product {
 	private int quantity;
 	private Category category;
 	
+	public Product() {
+		
+	}
+	
+	public Product(String name, int quantity) {
+		this.name = name;
+		this.quantity = quantity;
+	}
+	
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
 	}
-	private String getName() {
+	public String getName() {
 		return name;
 	}
-	private void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 	public int getQuantity() {

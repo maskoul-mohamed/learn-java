@@ -14,7 +14,7 @@ public class DatabaseConnection {
     	String driver = "com.mysql.cj.jdbc.Driver";
 		String url = "jdbc:mysql;//localhost:3306/catalogue";
 		String username = "root";
-		String password = "";
+		String password = "root";
 		Properties connectionProps = new Properties();
 		InputStream iStream = null;
 		
