@@ -14,7 +14,7 @@ public class ConnexionBD {
 	public ConnexionBD() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connexion = DriverManager.getConnection("jdbc:mysql://localhost/cataloge", "root", "root");
+			connexion = DriverManager.getConnection("jdbc:mysql://localhost/catalogue", "root", "root");
 			instruction = connexion.createStatement();
 		} catch (ClassNotFoundException ex) {
 			System.err.println("Problème de pilote");
