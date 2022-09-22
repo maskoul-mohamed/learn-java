@@ -3,17 +3,17 @@ package model;
 public class Categorie {
 	private Long idCat;
 	private String titre;
-	private String descriptiion;
+	private String description;
 	
 	public Categorie() {}
 	
 	
 	
-	public Categorie(Long idCat, String titre, String descriptiion) {
+	public Categorie(Long idCat, String titre, String description) {
 		super();
 		this.idCat = idCat;
 		this.titre = titre;
-		this.descriptiion = descriptiion;
+		this.description = description;
 	}
 
 
@@ -30,11 +30,11 @@ public class Categorie {
 	public void setTitre(String titre) {
 		this.titre = titre;
 	}
-	public String getDescriptiion() {
-		return descriptiion;
+	public String getDescription() {
+		return description;
 	}
-	public void setDescriptiion(String descriptiion) {
-		descriptiion = descriptiion;
+	public void setDescription(String description) {
+		description = description;
 	}
 	
 }
