@@ -5,7 +5,7 @@
 
 	<table border="1" cellpadding="3" cellspacing="2" width="90%" 	align="center">
 		<tr>
-			<th>Sujet>
+			<th>Tittle
 			</th>
 			<th>Message
 			</th>
@@ -29,4 +29,5 @@
 
 
 </font>
+<%@include file="/WEB-INF/jspf/footer.jspf"%>
 

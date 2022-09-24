@@ -5,7 +5,7 @@ import java.sql.SQLException;
 public class ListMessages extends ConnexionBD {
 	
 	public ListMessages(int idPerson) {
-		lire("SELECT * FROM message WHERE idPerson=\""+idPerson+"\"");
+		lire("SELECT * FROM messages WHERE idPerson=\""+idPerson+"\"");
 	}
 	
 	
@@ -21,7 +21,7 @@ public class ListMessages extends ConnexionBD {
 	
 	public String text() {
 		try {
-			return résultat.getString("text");
+			return résultat.getString("content");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

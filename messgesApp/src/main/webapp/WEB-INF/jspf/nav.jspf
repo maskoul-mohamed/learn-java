@@ -15,7 +15,7 @@
 				<th align="left"><a href='index.jsp'>Sujet</a></th>
 				<th>
 					<a href="#">Identification</a>
-					<a href="newlist.jsp">Inscription</a>
+					<a href="newuser.jsp">Inscription</a>
 				</th>
 			</tr>
 		</table>
