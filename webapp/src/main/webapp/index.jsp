@@ -25,7 +25,7 @@
                 Nom:<input type="text" name="nom" size="24">
             </h3>
             <h3>
-                Pr&eacute:<input type="text" name="Prenom" size="24">
+                Pr&eacute;nom:<input type="text" name="prenom" size="24">
             </h3>
             <h3>
                 Age:<input type="text" name="age" size="5">
