@@ -12,7 +12,7 @@ public class Utilitaire {
 	    static {
 	        try {
 	            Class.forName("com.mysql.cj.jdbc.Driver");
-	            conn = DriverManager.getConnection("jdbc:mysql://localhost/e_commerce", "root", "root");
+	            conn = DriverManager.getConnection("jdbc:mysql://localhost/e_commerce", "root", "");
 	        } catch (Exception e) {
 	            System.out.println("Problème de connexion !!\n"+e);
 

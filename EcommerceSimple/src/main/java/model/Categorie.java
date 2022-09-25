@@ -34,7 +34,7 @@ public class Categorie {
 		return description;
 	}
 	public void setDescription(String description) {
-		description = description;
+		this.description = description;
 	}
 	
 }
