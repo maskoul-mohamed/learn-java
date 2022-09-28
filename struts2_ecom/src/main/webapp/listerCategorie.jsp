@@ -46,7 +46,6 @@
                     Aucun Contact dans la liste
                 </s:else>
 		</div>
-		<p></p>
 		<a href="insertCategorie.jsp">Ajouter un Contact</a><br />
 	</center>
 

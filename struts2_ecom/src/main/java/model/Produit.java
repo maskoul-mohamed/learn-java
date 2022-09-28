@@ -14,8 +14,9 @@ public class Produit implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private int idProduit;
+	private int id;
 
+	private String designation;
 	private String photo;
 
 	private int prix;
@@ -30,12 +31,24 @@ public class Produit implements Serializable {
 	public Produit() {
 	}
 
-	public int getIdProduit() {
-		return this.idProduit;
+	public int getId() {
+		return this.id;
 	}
 
-	public void setIdProduit(int idProduit) {
-		this.idProduit = idProduit;
+	public void setId(int idProduit) {
+		this.id = idProduit;
+	}
+
+	public String getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	public String getPhoto() {
