@@ -8,8 +8,8 @@
 
 		<action name="lister" class="actions.CategorieAction"
 			method="lister">
-			<result name="success">listerCategorie.jsp</result>
-			<result name="input">listerCategorie.jsp</result>
+			<result name="success">/listerCategorie.jsp</result>
+			<result name="input">/listerCategorie.jsp</result>
 		</action>
 
 		<action name="search" class="actions.CategorieAction"
@@ -19,7 +19,13 @@
 					/listerCategorie.jsp
 				</param>
 			</result>
-			<result name="input">listerCategorie.jsp</result>
+			<result name="input">/listerCategorie.jsp</result>
+		</action>
+
+		<action  name="enregistrer" class="actions.CategorieAction"
+			method="enregistrer">
+			<result name="success">/listerCategorie.jsp</result>
+			<result name="input">/insertCategorie.jsp</result>
 		</action>
 	</package>
 </struts>

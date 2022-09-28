@@ -26,12 +26,19 @@ public class CategorieDAOImpl implements CategorieDAO {
 	} 
 	
 	@Override
-	public void addCategorie(Categorie categorie) {
+	public boolean  addCategorie(Categorie categorie) {
 		Session session = this.sessionFactory.getCurrentSession();
-		session.beginTransaction();
-		session.save(categorie);
-		session.getTransaction().commit();
-		logger.info("Categorie saved successfully, Categorie Details="+categorie);
+		try {
+			session.beginTransaction();
+			session.save(categorie);
+			session.getTransaction().commit();
+			logger.info("Categorie saved successfully, Categorie Details="+categorie);
+			return true;
+		} catch (Exception e) {
+			System.out.println("Error while adding categorie\n"+e);
+			return false;
+		}
+
 	}
 
 	@Override

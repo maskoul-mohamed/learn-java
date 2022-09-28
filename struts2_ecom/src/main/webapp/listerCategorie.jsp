@@ -47,7 +47,7 @@
                 </s:else>
 		</div>
 		<p></p>
-		<a href="saisirContact.action">Ajouter un Contact</a><br />
+		<a href="insertCategorie.jsp">Ajouter un Contact</a><br />
 	</center>
 
 </body>

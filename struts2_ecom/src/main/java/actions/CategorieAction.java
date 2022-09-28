@@ -119,20 +119,23 @@ public class CategorieAction extends ActionSupport implements ServletRequestAwar
 
 
 
-	public Categorie enregistrer() {
+	public String enregistrer() {
 		Categorie categorie = new Categorie();
+		categorie.setNomCategorie(nomCategorie);
+		categorie.setDescription(description);
 		CategorieDAO ct = new CategorieDAOImpl();
-
-		ct.addCategorie(categorie);
-		return categorie;
+		if (!ct.addCategorie(categorie)) {
+			return "input";
+		}
+		System.out.println(categorie.getDescription());
+		lister();
+		return "success";
 	}
 
 	public String lister() {
 		CategorieDAO ct = new CategorieDAOImpl();
 		listCategories = (ArrayList<Categorie>) ct.listCategories();
-		for(int i = 0 ; i< listCategories.size(); i++) {
-			System.out.println(listCategories.get(i).getDescription());
-		}
+	
 		return "success";
 	}
 
@@ -140,10 +143,7 @@ public class CategorieAction extends ActionSupport implements ServletRequestAwar
 	public String search() {
 		CategorieDAO ct = new CategorieDAOImpl();
 		setListCategories(ct.selectCatByKeyword(getKeyword()));
-		
-		for(int i = 0 ; i< listCategories.size(); i++) {
-			System.out.println(listCategories.get(i).getNomCategorie());
-		}
+
 		return "success";
 	}
 	

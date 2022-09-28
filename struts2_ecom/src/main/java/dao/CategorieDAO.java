@@ -5,7 +5,7 @@ import java.util.List;
 import model.Categorie;
 
 public interface CategorieDAO {
-	public void addCategorie(Categorie categorie);
+	public boolean  addCategorie(Categorie categorie);
 	public void updateCategorie(Categorie categorie);
 	public List<Categorie> listCategories();
 	public List<Categorie> selectCatByKeyword(String keyWord);
