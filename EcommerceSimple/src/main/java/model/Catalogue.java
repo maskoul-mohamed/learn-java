@@ -48,7 +48,7 @@ public class Catalogue {
 	}
 	
 	public ArrayList<Categorie> selectByKeyword(String keyword){
-		String query = "SELECT * FROM categories '%" + keyword + "%'";
+		String query = "SELECT * FROM categories  where NomCategorie like  '%" + keyword + "%'";
 		return selectCategories(query);
 	}
 	private ArrayList<Categorie> selectCategories(String requete) {
