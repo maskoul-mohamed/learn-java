@@ -4,6 +4,7 @@ import dao.CategorieDAO;
 import model.Categorie;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import com.opensymphony.xwork2.ActionSupport;
 import javax.servlet.http.HttpServletRequest;
@@ -95,15 +96,13 @@ public class CategorieAction extends ActionSupport implements ServletRequestAwar
 	private Map<String, Object> maSession;
 
 	public ArrayList<Categorie> getListCategories() {
-		CategorieDAO ct = new CategorieDAOImpl();
-		listCategories = (ArrayList<Categorie>) ct.listCategories();
 		return listCategories;
 	}
 	
 
 
-	public void setListCategories(ArrayList<Categorie> listCategories) {
-		this.listCategories = listCategories;
+	public void setListCategories(List<Categorie> list) {
+		this.listCategories = (ArrayList<Categorie>) list;
 	}
 	
 
@@ -140,7 +139,11 @@ public class CategorieAction extends ActionSupport implements ServletRequestAwar
 
 	public String search() {
 		CategorieDAO ct = new CategorieDAOImpl();
-		listCategories = (ArrayList<Categorie>) ct.selectCatByKeyword(getKeyword());
+		setListCategories(ct.selectCatByKeyword(getKeyword()));
+		
+		for(int i = 0 ; i< listCategories.size(); i++) {
+			System.out.println(listCategories.get(i).getNomCategorie());
+		}
 		return "success";
 	}
 	

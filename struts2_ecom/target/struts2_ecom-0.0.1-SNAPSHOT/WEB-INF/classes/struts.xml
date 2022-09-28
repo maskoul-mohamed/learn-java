@@ -2,18 +2,24 @@
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-	<constant name = "struts.devMode" value = "true" />
-    <package name="default" extends="struts-default">
-        <default-action-ref name="lister"/>
-        	
-    	<action name="lister" class="actions.CategorieAction" method="lister">
-            <result name="success">listerCategorie.jsp</result>
-            <result name="input">listerCategorie.jsp</result>
-        </action>
-        
-    	<action name="lister" class="actions.CategorieAction" method="search">
-            <result name="success">listerCategorie.jsp</result>
-            <result name="input">listerCategorie.jsp</result>
-        </action>
-    </package>
+	<constant name="struts.devMode" value="true" />
+	<package name="default" extends="struts-default">
+		<default-action-ref name="lister" />
+
+		<action name="lister" class="actions.CategorieAction"
+			method="lister">
+			<result name="success">listerCategorie.jsp</result>
+			<result name="input">listerCategorie.jsp</result>
+		</action>
+
+		<action name="search" class="actions.CategorieAction"
+			method="search">
+			<result name="success">
+				<param name="location">
+					/listerCategorie.jsp
+				</param>
+			</result>
+			<result name="input">listerCategorie.jsp</result>
+		</action>
+	</package>
 </struts>

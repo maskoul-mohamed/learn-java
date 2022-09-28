@@ -14,9 +14,8 @@
 		<s:form action="search">
 			<table>
 				<tr>
-					<td><s:label for="keyword" value="Chercher une catégorie:" /></td>
-					<td><s:textfield name="keyword" /></td>
-					<td><s:submit value="Chercher" /></td>
+					<td><s:textfield name="keyword" label="Chercher une catégorie"/>
+					<s:submit value="Chercher" /></td>
 				</tr>
 			</table>
 
