@@ -28,9 +28,8 @@
 			<result name="input">/insertCategorie.jsp</result>
 		</action>
 
-
 		<action name="listProduits" class="actions.ProduitAction"
-			method="listProduits">
+			method="AllProduits">
 			<result name="success">/listProduit.jsp</result>
 			<result name="input">/listProduit.jsp</result>
 		</action>

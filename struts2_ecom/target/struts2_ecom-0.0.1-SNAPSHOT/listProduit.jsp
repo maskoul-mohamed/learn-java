@@ -8,6 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+			<center>
+
 			<s:form action="search">
 			<table>
 				<tr>
@@ -18,9 +20,8 @@
 
 		</s:form>
 		<div>
-			<center>
 				<h2>Liste des Produits sur Annuaire.com</h2>
-			</center>
+			
 			<s:if test="%{listProduits.size()>0}">
 				<table border="1">
 					<tr>
@@ -44,10 +45,10 @@
 				</table>
 			</s:if>
 			<s:else>
-                    Aucun Contact dans la liste
+                    Aucun Produit dans la liste
                 </s:else>
 		</div>
-		<a href="insertCategorie.jsp">Ajouter un Contact</a><br />
-
+		<a href="insertCategorie.jsp">Ajouter un Produit</a><br />
+</center>
 </body>
 </html>
