@@ -25,12 +25,8 @@ public class Produit implements Serializable {
 	//bi-directional many-to-one association to Categorie
 	@ManyToOne
 	@JoinColumn(name="idCategorie")
-	private Categorie categorie1;
+	private Categorie categorie;
 
-	//bi-directional many-to-one association to Categorie
-	@ManyToOne
-	@JoinColumn(name="idCategorie")
-	private Categorie categorie2;
 
 	public Produit() {
 	}
@@ -67,20 +63,14 @@ public class Produit implements Serializable {
 		this.quantite = quantite;
 	}
 
-	public Categorie getCategorie1() {
-		return this.categorie1;
+	public Categorie getCategorie() {
+		return this.categorie;
 	}
 
-	public void setCategorie1(Categorie categorie1) {
-		this.categorie1 = categorie1;
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
 	}
 
-	public Categorie getCategorie2() {
-		return this.categorie2;
-	}
 
-	public void setCategorie2(Categorie categorie2) {
-		this.categorie2 = categorie2;
-	}
 
 }

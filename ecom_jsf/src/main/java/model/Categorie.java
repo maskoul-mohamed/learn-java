@@ -22,12 +22,9 @@ public class Categorie implements Serializable {
 	private String nomCategorie;
 
 	//bi-directional many-to-one association to Produit
-	@OneToMany(mappedBy="categorie1")
-	private List<Produit> produits1;
+	@OneToMany(mappedBy="categorie")
+	private List<Produit> produits;
 
-	//bi-directional many-to-one association to Produit
-	@OneToMany(mappedBy="categorie2")
-	private List<Produit> produits2;
 
 	public Categorie() {
 	}
@@ -56,48 +53,31 @@ public class Categorie implements Serializable {
 		this.nomCategorie = nomCategorie;
 	}
 
-	public List<Produit> getProduits1() {
-		return this.produits1;
+	public List<Produit> getProduits() {
+		return this.produits;
 	}
 
-	public void setProduits1(List<Produit> produits1) {
-		this.produits1 = produits1;
+	public void setProduits(List<Produit> produits) {
+		this.produits = produits;
 	}
 
-	public Produit addProduits1(Produit produits1) {
-		getProduits1().add(produits1);
-		produits1.setCategorie1(this);
+	public Produit addProduits1(Produit produits) {
+		getProduits().add(produits);
+		produits.setCategorie(this);
 
-		return produits1;
+		return produits;
 	}
 
-	public Produit removeProduits1(Produit produits1) {
-		getProduits1().remove(produits1);
-		produits1.setCategorie1(null);
+	public Produit removeProduits(Produit produits) {
+		getProduits().remove(produits);
+		produits.setCategorie(null);
 
-		return produits1;
+		return produits;
 	}
+	
+	
+	
 
-	public List<Produit> getProduits2() {
-		return this.produits2;
-	}
 
-	public void setProduits2(List<Produit> produits2) {
-		this.produits2 = produits2;
-	}
-
-	public Produit addProduits2(Produit produits2) {
-		getProduits2().add(produits2);
-		produits2.setCategorie2(this);
-
-		return produits2;
-	}
-
-	public Produit removeProduits2(Produit produits2) {
-		getProduits2().remove(produits2);
-		produits2.setCategorie2(null);
-
-		return produits2;
-	}
 
 }
