@@ -76,8 +76,16 @@ public class CategorieDAOImpl implements CategorieDAO, Serializable {
 
 	@Override
 	public void removeCategorie(int id) {
-		// TODO Auto-generated method stub
-
+		Session session = this.getSessionFactory().getCurrentSession();
+		Transaction transaction = session.beginTransaction();
+		Categorie categorie = (Categorie) session.load(Categorie.class, (Integer)(id));
+		if(null != categorie){
+			session.delete(categorie);
+		}
+		
+		transaction.commit();
+		session.close();
+		logger.info("Categorie deleted successfully, Categorie details="+categorie);
 	}
 
 }

@@ -75,9 +75,4 @@ public class Categorie implements Serializable {
 		return produits;
 	}
 	
-	
-	
-
-
-
 }
